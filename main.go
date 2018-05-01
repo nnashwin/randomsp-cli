@@ -38,7 +38,8 @@ func main() {
 					return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 				}
 
-				color.Magenta(stock)
+				color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+				color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 				return nil
 			},
