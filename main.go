@@ -44,6 +44,17 @@ func main() {
 				return nil
 			},
 		},
+
+		{
+			Name:    "getStock",
+			Aliases: []string{"gs"},
+			Usage:   "Return a stock from a specific index.  Defaults to S&P500.",
+			Action: func(c *cli.Context) error {
+				color.Blue("Getting the stock")
+
+				return nil
+			},
+		},
 	}
 
 	err := app.Run(os.Args)
