@@ -29,7 +29,7 @@ func main() {
 
 	app.Commands = []cli.Command{
 		{
-			Name:    "randomStock",
+			Name:    "random",
 			Aliases: []string{"rs"},
 			Usage:   "Return a random stock from any of the supported indices",
 			Action: func(c *cli.Context) error {
@@ -46,13 +46,56 @@ func main() {
 		},
 
 		{
-			Name:    "getStock",
-			Aliases: []string{"gs"},
-			Usage:   "Return a stock from a specific index.  Defaults to S&P500.",
-			Action: func(c *cli.Context) error {
-				color.Blue("Getting the stock")
+			Name:    "index",
+			Aliases: []string{"is"},
+			Usage:   "Return a random stock from a specific index.  Defaults to S&P500.",
+			Subcommands: []cli.Command{
+				{
+					Name:    "SP",
+					Aliases: []string{"sp"},
+					Usage:   "Returns a random stock from the Standard & Poors 500 index",
+					Action: func(c *cli.Context) error {
+						color.Blue("Getting S&P 500 stock")
 
-				return nil
+						return nil
+					},
+				},
+				{
+					Name:    "DAX",
+					Aliases: []string{"dax"},
+					Usage:   "Returns a random stock from the DAX index",
+					Action: func(c *cli.Context) error {
+						color.Blue("Getting DAX stock")
+						return nil
+					},
+				},
+				{
+					Name:    "FinancialTimes",
+					Aliases: []string{"ft"},
+					Usage:   "Returns a random stock from the Financial Times index",
+					Action: func(c *cli.Context) error {
+						color.Blue("Getting Financial Times stock")
+						return nil
+					},
+				},
+				{
+					Name:    "Nasdaq",
+					Aliases: []string{"nas"},
+					Usage:   "Returns a random stock from the Nasdaq index",
+					Action: func(c *cli.Context) error {
+						color.Blue("Getting Nasdaq stock")
+						return nil
+					},
+				},
+				{
+					Name:    "ItalianFinancialTimes",
+					Aliases: []string{"ift"},
+					Usage:   "Returns a random stock from the Italian Financial Times index",
+					Action: func(c *cli.Context) error {
+						color.Blue("Getting Italian Financial Times stock")
+						return nil
+					},
+				},
 			},
 		},
 	}
