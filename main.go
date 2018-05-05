@@ -55,7 +55,13 @@ func main() {
 					Aliases: []string{"sp"},
 					Usage:   "Returns a random stock from the Standard & Poors 500 index",
 					Action: func(c *cli.Context) error {
-						color.Blue("Getting S&P 500 stock")
+						stock, err := rsp.GetRandomSPStock()
+						if err != nil {
+							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
+						}
+
+						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
@@ -65,7 +71,14 @@ func main() {
 					Aliases: []string{"dax"},
 					Usage:   "Returns a random stock from the DAX index",
 					Action: func(c *cli.Context) error {
-						color.Blue("Getting DAX stock")
+						stock, err := rsp.GetRandomDaxStock()
+						if err != nil {
+							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
+						}
+
+						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+
 						return nil
 					},
 				},
@@ -74,7 +87,14 @@ func main() {
 					Aliases: []string{"ft"},
 					Usage:   "Returns a random stock from the Financial Times index",
 					Action: func(c *cli.Context) error {
-						color.Blue("Getting Financial Times stock")
+						stock, err := rsp.GetRandomFinancialTimesStock()
+						if err != nil {
+							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
+						}
+
+						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+
 						return nil
 					},
 				},
@@ -83,7 +103,14 @@ func main() {
 					Aliases: []string{"nas"},
 					Usage:   "Returns a random stock from the Nasdaq index",
 					Action: func(c *cli.Context) error {
-						color.Blue("Getting Nasdaq stock")
+						stock, err := rsp.GetRandomNasdaqStock()
+						if err != nil {
+							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
+						}
+
+						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+
 						return nil
 					},
 				},
@@ -92,7 +119,14 @@ func main() {
 					Aliases: []string{"ift"},
 					Usage:   "Returns a random stock from the Italian Financial Times index",
 					Action: func(c *cli.Context) error {
-						color.Blue("Getting Italian Financial Times stock")
+						stock, err := rsp.GetRandomItalianFinancialTimesStock()
+						if err != nil {
+							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
+						}
+
+						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+
 						return nil
 					},
 				},
