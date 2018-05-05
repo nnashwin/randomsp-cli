@@ -47,7 +47,7 @@ func main() {
 
 		{
 			Name:    "index",
-			Aliases: []string{"is"},
+			Aliases: []string{"idx"},
 			Usage:   "Return a random stock from a specific index.  Defaults to S&P500.",
 			Subcommands: []cli.Command{
 				{
@@ -61,7 +61,6 @@ func main() {
 						}
 
 						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
@@ -77,7 +76,6 @@ func main() {
 						}
 
 						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
@@ -93,7 +91,6 @@ func main() {
 						}
 
 						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
@@ -109,7 +106,6 @@ func main() {
 						}
 
 						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
@@ -125,7 +121,6 @@ func main() {
 						}
 
 						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-						color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
 
 						return nil
 					},
