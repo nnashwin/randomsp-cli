@@ -58,7 +58,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -73,7 +73,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -88,7 +88,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -103,7 +103,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -118,7 +118,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
+						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
 
 						return nil
 					},
