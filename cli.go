@@ -98,7 +98,7 @@ func StartCli(args []string) ([]string, error) {
 				},
 				{
 					Name:    "Nasdaq",
-					Aliases: []string{"nas"},
+					Aliases: []string{"nas", "nasdaq"},
 					Usage:   "Returns a random stock from the Nasdaq index",
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomNasdaqStock()
