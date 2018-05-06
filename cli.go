@@ -7,8 +7,11 @@ import (
 	"github.com/urfave/cli"
 )
 
-func StartCli(args []string) error {
+func StartCli(args []string) ([]string, error) {
 	errCol := color.New(color.FgRed).SprintFunc()
+	respCol := color.New(color.FgMagenta).SprintFunc()
+
+	var resp []string
 	app := cli.NewApp()
 	app.Name = "randomsp-cli"
 	app.Version = "0.1.0"
@@ -36,8 +39,8 @@ func StartCli(args []string) error {
 					return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 				}
 
-				color.Magenta(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-				color.Magenta(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+				resp = append(resp, respCol(fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol)))
+				resp = append(resp, respCol(fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index)))
 
 				return nil
 			},
@@ -58,7 +61,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, respCol(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol)))
 
 						return nil
 					},
@@ -73,7 +76,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, respCol(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol)))
 
 						return nil
 					},
@@ -88,7 +91,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, respCol(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol)))
 
 						return nil
 					},
@@ -103,7 +106,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, respCol(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol)))
 
 						return nil
 					},
@@ -118,7 +121,7 @@ func StartCli(args []string) error {
 							return fmt.Errorf(errCol("The randomsp failed with following error: %s. \nCheck your internet connection and try again."), err)
 						}
 
-						color.Magenta(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, respCol(fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol)))
 
 						return nil
 					},
@@ -126,6 +129,6 @@ func StartCli(args []string) error {
 			},
 		},
 	}
-
-	return app.Run(args)
+	err := app.Run(args)
+	return resp, err
 }

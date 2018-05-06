@@ -6,7 +6,10 @@ import (
 )
 
 func main() {
-	err := StartCli(os.Args)
+	resp, err := StartCli(os.Args)
+	for _, str := range resp {
+		fmt.Println(str)
+	}
 	if err != nil {
 		fmt.Println(err)
 		return
