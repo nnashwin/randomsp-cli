@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	rsp "github.com/ru-lai/randomsp"
-	"github.com/urfave/cli"
+	"gopkg.in/urfave/cli.v1"
 )
 
 func StartCli(args []string) ([]string, error) {
@@ -20,7 +20,7 @@ func StartCli(args []string) ([]string, error) {
 	}
 
 	app.Action = func(c *cli.Context) error {
-		resp = append(resp, "Get a random stock pick!")
+		resp = append(resp, "Get a random stock pick!\n")
 		return nil
 	}
 
