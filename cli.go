@@ -10,7 +10,7 @@ func StartCli(args []string) ([]string, error) {
 	var resp []string
 	app := cli.NewApp()
 	app.Name = "randomsp-cli"
-	app.Version = "0.1.0"
+	app.Version = "1.0.0"
 	app.Usage = "a cli tool to randomly query stocks from a few major indices"
 	app.Authors = []cli.Author{
 		cli.Author{
