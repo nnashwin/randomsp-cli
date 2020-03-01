@@ -32,11 +32,11 @@ func StartCli(args []string) ([]string, error) {
 			Action: func(c *cli.Context) error {
 				stock, err := rsp.GetRandomIndexStock()
 				if err != nil {
-					return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+					return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 				}
 
-				resp = append(resp, fmt.Sprintf("Your randomly selected stock symbol is:\n%s", stock.Symbol))
-				resp = append(resp, fmt.Sprintf("%s is a stock on the %s stock index", stock.Symbol, stock.Index))
+				resp = append(resp, fmt.Sprintf("Your randomly selected stock symbol is:\n%s\n", stock.Symbol))
+				resp = append(resp, fmt.Sprintf("%s is a stock on the %s stock index\n", stock.Symbol, stock.Index))
 
 				return nil
 			},
@@ -54,10 +54,10 @@ func StartCli(args []string) ([]string, error) {
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomSPStock()
 						if err != nil {
-							return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 						}
 
-						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -69,10 +69,10 @@ func StartCli(args []string) ([]string, error) {
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomDaxStock()
 						if err != nil {
-							return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 						}
 
-						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -84,10 +84,10 @@ func StartCli(args []string) ([]string, error) {
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomFinancialTimesStock()
 						if err != nil {
-							return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 						}
 
-						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -99,10 +99,10 @@ func StartCli(args []string) ([]string, error) {
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomNasdaqStock()
 						if err != nil {
-							return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 						}
 
-						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
 
 						return nil
 					},
@@ -114,10 +114,10 @@ func StartCli(args []string) ([]string, error) {
 					Action: func(c *cli.Context) error {
 						stock, err := rsp.GetRandomItalianFinancialTimesStock()
 						if err != nil {
-							return fmt.Errorf("The randomsp failed with following error: %s. \nCheck your internet connection and try again.", err)
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 						}
 
-						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s", stock.Index, stock.Symbol))
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
 
 						return nil
 					},
