@@ -9,8 +9,10 @@ github.com/mattn/go-colorable v0.1.4/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVc
 github.com/mattn/go-isatty v0.0.8/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=
 github.com/mattn/go-isatty v0.0.11 h1:FxPOTFNqGkuDUGi3H/qkUbQO4ZiBa2brKq5r0l8TGeM=
 github.com/mattn/go-isatty v0.0.11/go.mod h1:PhnuNfih5lzO57/f3n+odYbM4JtupLOxQOAqxQCu2WE=
-github.com/ru-lai/randomsp v1.0.0 h1:UQNwSKGkcphu2jfaootNUZOAoNht40EZDPX67eUc1wM=
-github.com/ru-lai/randomsp v1.0.0/go.mod h1:cMfFXzpUuW+jnYrWphc4RBWrafs3Fvk6GQ108guAyB0=
+github.com/tlboright/go-rint v1.0.2 h1:6XkoOcSD1rVoQlE0BtgH8YpLxPjLFv3aL6LB01//zvw=
+github.com/tlboright/go-rint v1.0.2/go.mod h1:DWE4W0noWh1KRac8IG58trWx/V8tJSRw9NHqfK8iwys=
+github.com/tlboright/randomsp v1.1.1 h1:2jCTk7J9ovIQBB04y7+g17MsHaTAJDZu49tqTvuCAMg=
+github.com/tlboright/randomsp v1.1.1/go.mod h1:9cRl9oqFRCkBovO3PKhUfF+aXsmCOfiraZoiwqeqeys=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/net v0.0.0-20180218175443-cbe0f9307d01/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
 golang.org/x/net v0.0.0-20200202094626-16171245cfb2 h1:CCH4IOTTfewWjGOlSp+zGcjutRKlBEZQ6wTn8ozI/nI=
