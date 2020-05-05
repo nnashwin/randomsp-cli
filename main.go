@@ -8,7 +8,6 @@ import (
 
 func main() {
 	errCol := color.New(color.FgRed).SprintFunc()
-	respCol := color.New(color.FgMagenta).SprintFunc()
 
 	resp, err := StartCli(os.Args)
 	if err != nil {
@@ -18,6 +17,6 @@ func main() {
 
 	// Print all output to the response
 	for _, str := range resp {
-		fmt.Printf("\n%s", respCol(fmt.Sprintf(str)))
+		fmt.Printf("%s", fmt.Sprintf(str))
 	}
 }

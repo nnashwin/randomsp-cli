@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	rsp "github.com/ru-lai/randomsp"
+	rsp "github.com/tlboright/randomsp"
 	"gopkg.in/urfave/cli.v1"
 )
 
@@ -10,7 +10,7 @@ func StartCli(args []string) ([]string, error) {
 	var resp []string
 	app := cli.NewApp()
 	app.Name = "randomsp-cli"
-	app.Version = "1.0.0"
+	app.Version = "1.1.0"
 	app.Usage = "a cli tool to randomly query stocks from a few major indices"
 	app.Authors = []cli.Author{
 		cli.Author{
@@ -20,7 +20,7 @@ func StartCli(args []string) ([]string, error) {
 	}
 
 	app.Action = func(c *cli.Context) error {
-		resp = append(resp, "Get a random stock pick!\n")
+		resp = append(resp, "rsp: A stock index wasn't chosen\nFor help, type: rsp help\n")
 		return nil
 	}
 
@@ -35,7 +35,7 @@ func StartCli(args []string) ([]string, error) {
 					return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
 				}
 
-				resp = append(resp, fmt.Sprintf("Your randomly selected stock symbol is:\n%s\n", stock.Symbol))
+				resp = append(resp, fmt.Sprintf("Your randomly selected stock symbol is:\n%s\n\n", stock.Symbol))
 				resp = append(resp, fmt.Sprintf("%s is a stock on the %s stock index\n", stock.Symbol, stock.Index))
 
 				return nil
