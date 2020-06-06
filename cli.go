@@ -108,6 +108,21 @@ func StartCli(args []string) ([]string, error) {
 					},
 				},
 				{
+					Name:    "Nikkei",
+					Aliases: []string{"nik", "nikkei"},
+					Usage:   "Returns a random stock from the Nikkei index.\n    Note: Since the Nikkei 225 index uses numbers for symbols, the tool returns the name of the company and its number from the Nikkei 225 index",
+					Action: func(c *cli.Context) error {
+						stock, err := rsp.GetRandomNikkeiStock()
+						if err != nil {
+							return fmt.Errorf("randomsp-cli failed with following error: %s. \nCheck your internet connection and try again.\n", err)
+						}
+
+						resp = append(resp, fmt.Sprintf("Your randomly selected %s stock symbol is:\n%s\n", stock.Index, stock.Symbol))
+
+						return nil
+					},
+				},
+				{
 					Name:    "ItalianFinancialTimes",
 					Aliases: []string{"ift"},
 					Usage:   "Returns a random stock from the Italian Financial Times index",
